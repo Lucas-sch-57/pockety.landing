@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  /* Couleurs custom */
+  --color-primary: #5ea500;
+  --color-primary-dark: #2d5016;
+  --color-primary-light: #7ac61f;
+
+  /* Gradients custom */
+  --gradient-hero: linear-gradient(
+    0deg,
+    rgba(122, 198, 31, 1) 0%,
+    rgba(94, 165, 0, 0.5) 100%
+  );
+  --shadow-sm: 10px -10px 25px 5px rgba(0, 0, 0, 0.04);
+}
+
+/* Utilisation */
+.bg-hero-gradient {
+  background-image: var(--gradient-hero);
+}

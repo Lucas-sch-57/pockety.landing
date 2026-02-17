@@ -19,6 +19,7 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  const [rgpd, setRgpd] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -165,6 +166,30 @@ const Contact = () => {
                 />
               </div>
 
+              {/* RGPD */}
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="rgpd"
+                  checked={rgpd}
+                  onChange={(e) => setRgpd(e.target.checked)}
+                  required
+                  className="mt-1 h-4 w-4 rounded border-gray-300 text-primary accent-primary focus:ring-primary/20"
+                />
+                <label htmlFor="rgpd" className="text-sm text-gray-600">
+                  J'accepte que mes données soient traitées conformément à la{' '}
+                  <a
+                    href="/confidentialite"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline hover:text-primary-dark"
+                  >
+                    politique de confidentialité
+                  </a>
+                  . *
+                </label>
+              </div>
+
               {/* Error */}
               {error && (
                 <p className="text-red-500 text-sm text-center">{error}</p>
@@ -173,7 +198,7 @@ const Contact = () => {
               {/* Submit */}
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || !rgpd}
                 className="w-full flex items-center justify-center gap-2 bg-primary text-white px-6 py-3.5 rounded-xl font-semibold shadow-md transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:bg-primary-dark active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <Send size={18} />

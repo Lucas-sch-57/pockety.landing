@@ -21,7 +21,7 @@ export const accessToBeta: Array<AccessToBeta> = [
   },
   {
     icon: Gift,
-    title: 'Gratuit durante toute la bêta',
+    title: 'Gratuit durant toute la bêta',
     description: 'Testez toutes les fonctionnalités sans aucun frais',
   },
 ];

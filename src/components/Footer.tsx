@@ -28,6 +28,10 @@ const Footer = () => {
 
         {/* Liens */}
         <div className="mb-6 flex flex-wrap items-center justify-center gap-2 text-sm text-gray-600">
+          <Link to="/mentions-legales" className="hover:text-primary">
+            Mentions légales
+          </Link>
+          <span>-</span>
           <Link to="/confidentialite" className="hover:text-primary">
             Politique de confidentialité
           </Link>

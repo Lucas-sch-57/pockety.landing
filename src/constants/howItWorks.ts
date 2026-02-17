@@ -3,9 +3,9 @@ import type { HowItWorksItem } from '../types/how-it-works';
 
 export const howItWorks: Array<HowItWorksItem> = [
   {
-    title: 'Créez votre compte en 2 minutes',
+    title: 'Créez votre compte en quelques secondes',
     description:
-      "Inscription rapide en 2 minutes. Aucune carte bancaire requise, c'est gratuit.",
+      "Inscription rapide en quelques secondes. Aucune carte bancaire requise, c'est gratuit.",
     icon: User,
     number: 1,
   },

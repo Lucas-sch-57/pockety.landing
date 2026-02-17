@@ -34,7 +34,11 @@ const HeaderMenu = () => {
           <nav className="rounded-full border border-white/20 bg-white/10 px-6 py-2.5 backdrop-blur-sm">
             <ul className="flex gap-7 text-sm font-medium">
               {menu.map((item, index) => (
-                <MenuItem key={index} item={item} isActive={activeSection === item.link} />
+                <MenuItem
+                  key={index}
+                  item={item}
+                  isActive={activeSection === item.link}
+                />
               ))}
             </ul>
           </nav>
@@ -44,16 +48,25 @@ const HeaderMenu = () => {
         <div className="flex-1 flex items-center justify-end gap-3">
           {!isMobile && (
             <>
-              <a href="#" className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer px-3 py-2">
+              <a
+                href="https://app.pockety.fr/login"
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer px-3 py-2"
+              >
                 Se connecter
               </a>
-              <a href="https://app.pockety.fr/register" className="bg-white text-primary-dark px-5 py-2 rounded-full text-sm font-semibold shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:bg-white/90 active:scale-[0.98]">
+              <a
+                href="https://app.pockety.fr/register"
+                className="bg-white text-primary-dark px-5 py-2 rounded-full text-sm font-semibold shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:bg-white/90 active:scale-[0.98]"
+              >
                 S'inscrire
               </a>
             </>
           )}
           {isMobile && (
-            <button onClick={toggleSidebar} className="cursor-pointer text-white">
+            <button
+              onClick={toggleSidebar}
+              className="cursor-pointer text-white"
+            >
               <Menu size={25} />
             </button>
           )}
